@@ -1,12 +1,19 @@
 const express = require('express'); // commonjs
+const path = require('path'); // commonjs
+
 // import express from 'express'; //es modules
 
 const app = express(); // app express
 const port = 8081; // port
 
+// config template engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 // khai báo route
 app.get('/', (req, res) => {
-  res.send('Hello World vs lppduy !');
+  // res.send('Hello World vs lppduy !');
+  res.render('sample.ejs');
 });
 
 app.get('/abc', (req, res) => {
