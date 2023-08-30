@@ -6,7 +6,15 @@ const port = 8081; // port
 
 // khai báo route
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello World vs lppduy !');
+});
+
+app.get('/abc', (req, res) => {
+  res.send('Check ABC');
+});
+
+app.get('/lppd', (req, res) => {
+  res.send('<h1>Duy is learning coding 🤡</h1>');
 });
 
 //
