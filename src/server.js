@@ -15,8 +15,8 @@ app.set('view engine', 'ejs');
 
 // khai báo route
 app.get('/', (req, res) => {
-  // res.send('Hello World vs lppduy !');
-  res.render('sample.ejs');
+  res.send('Hello World vs lppduy & nodemon 🚀 !');
+  // res.render('sample.ejs');
 });
 
 app.get('/abc', (req, res) => {
