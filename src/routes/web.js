@@ -1,17 +1,13 @@
 const express = require('express');
+const { getHomepage, getABC, getLppd } = require('../controllers/homeController');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('Hello World vs lppduy & nodemon 🚀 !');
-});
+// router.Method('/route',handler')
 
-router.get('/abc', (req, res) => {
-  res.send('Check ABC');
-});
+router.get('/', getHomepage);
 
-router.get('/lppd', (req, res) => {
-  // res.send('<h1>Duy is learning coding 🤡</h1>');
-  res.render('sample.ejs');
-});
+router.get('/abc', getABC);
+
+router.get('/lppd', getLppd);
 
 module.exports = router;
