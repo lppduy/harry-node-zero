@@ -20,7 +20,14 @@ const connection = mysql.createConnection({
   host: 'localhost',
   port: 3307, // default 3306
   user: 'root',
-  database: 'test',
+  password: '123456',
+  database: 'hoidanit',
+});
+
+// simple query
+connection.query('SELECT * FROM Users', function (err, results, fields) {
+  console.log('results', results); // results contains rows returned by server
+  console.log('fields', fields); // fields contains extra meta data about results, if available
 });
 
 app.listen(port, () => {
